@@ -6,7 +6,9 @@ namespace KristaLO.ViewModels
 {
     public class AddMealViewModel
     {
+
         public List<SelectListItem> Restrictions { get; set; }
+
         public AddMealViewModel()
         {
         }

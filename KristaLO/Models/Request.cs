@@ -1,15 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
+using FinalLiftOff.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
+
 namespace KristaLO.Models
 {
     public class Request
     {
+        public int Id { get; set; }
+
         public int Price { get; set; }
 
         public int Portion { get; set; }
 
         public string Meal { get; set; }
 
-        public List<Restrictions> DietaryR { get; set; }
+        public List<SelectListItem> DietaryR { get; set; }
 
         public string NameCustomer { get; set; }
 
