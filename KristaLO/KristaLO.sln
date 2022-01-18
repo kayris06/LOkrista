@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1700.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KristaLO", "KristaLO.csproj", "{FE2CF8C2-C0BE-45F5-B4D4-63AB810EA4C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE2CF8C2-C0BE-45F5-B4D4-63AB810EA4C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE2CF8C2-C0BE-45F5-B4D4-63AB810EA4C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE2CF8C2-C0BE-45F5-B4D4-63AB810EA4C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE2CF8C2-C0BE-45F5-B4D4-63AB810EA4C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B5BFE833-43A3-4770-8D84-C0C07ECF29B4}
+	EndGlobalSection
+EndGlobal
