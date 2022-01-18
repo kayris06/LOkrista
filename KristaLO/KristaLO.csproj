@@ -8,6 +8,7 @@
   <ItemGroup>
     <None Remove="ViewModels\" />
     <None Remove="Views\Meals\" />
+    <None Remove="LiveXAML" />
   </ItemGroup>
   <ItemGroup>
     <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
