@@ -1,4 +1,5 @@
 ﻿using System;
+using KristaLO.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KristaLO.Controllers
@@ -14,11 +15,11 @@ namespace KristaLO.Controllers
             return View();
         }
 
-        [HttpPost]
-        [Route("/Meals")]
+        
         public IActionResult Add()
         {
-            return View("/Add");
+            AddMealViewModel addMealViewModel = new AddMealViewModel();
+            return View(addMealViewModel);
         }
     }
 }
