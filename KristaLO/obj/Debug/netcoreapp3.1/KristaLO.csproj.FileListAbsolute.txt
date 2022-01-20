@@ -94,7 +94,6 @@
 /Users/kristavaldez/Desktop/Final/LOkrista/KristaLO/obj/Debug/netcoreapp3.1/KristaLO.genruntimeconfig.cache
 /Users/kristavaldez/Desktop/Final/LOkrista/KristaLO/obj/Debug/netcoreapp3.1/Razor/Views/Meals/Add.cshtml.g.cs
 /Users/kristavaldez/Desktop/Final/LOkrista/KristaLO/obj/Debug/netcoreapp3.1/Razor/Views/Meals/Index.cshtml.g.cs
-/Users/kristavaldez/Desktop/Final/LOkrista/KristaLO/obj/Debug/netcoreapp3.1/Razor/Views/Meals/Info.cshtml.g.cs
 /Users/kristavaldez/Desktop/final/LastProject/KristaLO/obj/Debug/netcoreapp3.1/KristaLO.csproj.AssemblyReference.cache
 /Users/kristavaldez/Desktop/final/LastProject/KristaLO/obj/Debug/netcoreapp3.1/KristaLO.GeneratedMSBuildEditorConfig.editorconfig
 /Users/kristavaldez/Desktop/final/LastProject/KristaLO/obj/Debug/netcoreapp3.1/KristaLO.AssemblyInfoInputs.cache
@@ -193,3 +192,5 @@
 /Users/kristavaldez/Desktop/final/LastProject/KristaLO/obj/Debug/netcoreapp3.1/KristaLO.Views.pdb
 /Users/kristavaldez/Desktop/final/LastProject/KristaLO/obj/Debug/netcoreapp3.1/KristaLO.csproj.CopyComplete
 /Users/kristavaldez/Desktop/final/LastProject/KristaLO/obj/Debug/netcoreapp3.1/KristaLO.genruntimeconfig.cache
+/Users/kristavaldez/Desktop/Final/LOkrista/KristaLO/obj/Debug/netcoreapp3.1/Razor/Views/Home/About.cshtml.g.cs
+/Users/kristavaldez/Desktop/Final/LOkrista/KristaLO/obj/Debug/netcoreapp3.1/Razor/Views/Meals/Info.cshtml.g.cs

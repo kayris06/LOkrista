@@ -36,10 +36,16 @@ namespace KristaLO.Controllers
            
                 };
 
-                return Redirect("/Meals/Info");
+                return Redirect("/Meals");
             }
             return View(addMealViewModel);
         }
+
+        public IActionResult Info()
+        {
+            return View();
+        }
+        
     }
 }
 
