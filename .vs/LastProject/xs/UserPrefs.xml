@@ -1,18 +1,5 @@
 ﻿<Properties StartupConfiguration="{24C7D16C-5F98-47F3-A630-B2A840598282}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="KristaLO/Views/Meals/Add.cshtml">
-    <Files>
-      <File FileName="KristaLO/Views/Meals/Add.cshtml" Line="2" Column="1" IsPinned="True" />
-      <File FileName="KristaLO/Views/Home/Index.cshtml" IsPinned="True" />
-      <File FileName="KristaLO/ViewModels/AddMealViewModel.cs" />
-      <File FileName="KristaLO/ViewModels/RegisterCookViewModel.cs" />
-      <File FileName="KristaLO/ViewModels/RegisterCustomerViewModel.cs" />
-      <File FileName="KristaLO/ViewModels/RequestMealViewModel.cs" />
-      <File FileName="KristaLO/Controllers/MealsController.cs" />
-      <File FileName="KristaLO/Models/Meals.cs" />
-      <File FileName="KristaLO/Views/Meals/Index.cshtml" />
-      <File FileName="KristaLO/Views/Meals/Info.cshtml" />
-      <File FileName="KristaLO/Controllers/HomeController.cs" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
