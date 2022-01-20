@@ -20,7 +20,7 @@ namespace KristaLO.ViewModels
         [Required (ErrorMessage = "Description is required")]
         public string Description { get; set; }
 
-        public List<Restrictions> Restrictions { get; set; }
+        //public List<Restrictions> Restrictions { get; set; }
 
         public AddMealViewModel()
         {
