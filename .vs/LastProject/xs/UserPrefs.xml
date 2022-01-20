@@ -1,11 +1,13 @@
 ﻿<Properties StartupConfiguration="{24C7D16C-5F98-47F3-A630-B2A840598282}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="KristaLO/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="KristaLO/Views/Meals/Add.cshtml">
     <Files>
       <File FileName="KristaLO/Views/Home/About.cshtml" Line="5" Column="1" />
-      <File FileName="KristaLO/Controllers/MealsController.cs" Line="45" Column="2" />
+      <File FileName="KristaLO/Controllers/MealsController.cs" Line="39" Column="45" />
       <File FileName="KristaLO/Models/Meals.cs" Line="26" Column="27" />
-      <File FileName="KristaLO/ViewModels/AddMealViewModel.cs" Line="19" Column="1" />
-      <File FileName="KristaLO/Program.cs" Line="16" Column="1" />
+      <File FileName="KristaLO/ViewModels/AddMealViewModel.cs" Line="30" Column="1" />
+      <File FileName="KristaLO/Program.cs" Line="14" Column="47" />
+      <File FileName="KristaLO/Views/Meals/Info.cshtml" Line="1" Column="1" />
+      <File FileName="KristaLO/Views/Meals/Add.cshtml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -21,9 +23,10 @@
               <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Home" expanded="True" />
-                <Node name="Meals" expanded="True" />
+                <Node name="Meals" expanded="True">
+                  <Node name="Add.cshtml" selected="True" />
+                </Node>
               </Node>
-              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>

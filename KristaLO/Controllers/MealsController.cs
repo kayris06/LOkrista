@@ -31,13 +31,12 @@ namespace KristaLO.Controllers
                 Meals newMeal = new Meals
                 {
                     Price = addMealViewModel.Price,
-
                     Name = addMealViewModel.Name,
                     Description = addMealViewModel.Description
            
                 };
 
-                return Redirect("/Meals");
+                return Redirect("/Meals/Info");
             }
             return View(addMealViewModel);
         }

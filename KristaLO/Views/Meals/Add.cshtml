@@ -9,23 +9,43 @@
 
 
 <form asp-controller="Meals" asp-action="Add" method="post">
-        <div class="form-group">
-            <label asp-for="Price"></label>
-            <input asp-for="Price" />
-            <span asp-validation-for="Price"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="Name"></label>
-            <input asp-for="Name" />
-            <span asp-validation-for="Name"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="Description"></label>
-            <input asp-for="Description" />
-        </div>
-        <div class="form-group">
-            <label>Dietary Restrictions</label>
-            @*<select asp-for="CategoryId" asp-items="Model.Categories"></select>*@
-        </div>
-        <input type="submit" value="Add Meal" />
-    </form>
+    <div class="form-group">
+        <label asp-for="Price"></label>
+        <br />
+        <input asp-for="Price" />
+        <span asp-validation-for="Price"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <br />
+        <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <br />
+        <textarea name="comments" cols="25" rows="3"></textarea>
+        <span asp-validation-for="Description"></span>
+    </div>
+   
+
+    <div class="form-group">
+        @*<label asp-for="Description"></label>*@
+        <label>Dietary Restrictions</label>
+        <br />
+        <input type="checkbox" name="restriction" />
+        <input type="checkbox"name="restriction" />
+        @*@foreach (var dietaryR in @Model.Restrictions)
+        {
+            <label>@dietaryR.Name</label>
+            <input type="checkbox" name="selectedSkills" value="@dietaryR.Id" />
+        }
+        <span><a asp-controller="Restriction" asp-action="Add"> Add Skill </a></span>*@
+
+    </div>
+
+    <input type="submit" value="Add Meal" />
+</form>
+
+
+<br>
