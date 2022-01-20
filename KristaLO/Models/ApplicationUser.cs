@@ -1,9 +1,11 @@
 ﻿using System;
+using Microsoft.AspNetCore.Identity;
+
 namespace KristaLO.Models
 {
-	public class User
+	public class ApplicationUser : IdentityUser
 	{
-		public User()
+		public ApplicationUser() 
 		{
 		}
 	}
