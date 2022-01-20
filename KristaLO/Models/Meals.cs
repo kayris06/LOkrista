@@ -17,7 +17,7 @@ namespace FinalLiftOff.Models
 
         public string Description { get; set; }
 
-        public string Restrictions { get; set; }
+        //public string Restrictions { get; set; }
 
         
 

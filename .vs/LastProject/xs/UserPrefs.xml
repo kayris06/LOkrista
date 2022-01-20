@@ -1,22 +1,29 @@
 ﻿<Properties StartupConfiguration="{24C7D16C-5F98-47F3-A630-B2A840598282}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="KristaLO/Program.cs">
+    <Files>
+      <File FileName="KristaLO/Views/Home/About.cshtml" Line="5" Column="1" />
+      <File FileName="KristaLO/Controllers/MealsController.cs" Line="45" Column="2" />
+      <File FileName="KristaLO/Models/Meals.cs" Line="26" Column="27" />
+      <File FileName="KristaLO/ViewModels/AddMealViewModel.cs" Line="19" Column="1" />
+      <File FileName="KristaLO/Program.cs" Line="16" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="LastProject" expanded="True">
             <Node name="KristaLO" expanded="True">
               <Node name="Areas" expanded="True">
-                <Node name="Identity" expanded="True" selected="True">
-                  <Node name="Pages" expanded="True" />
-                </Node>
+                <Node name="Identity" expanded="True" />
               </Node>
               <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Home" expanded="True" />
                 <Node name="Meals" expanded="True" />
               </Node>
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>

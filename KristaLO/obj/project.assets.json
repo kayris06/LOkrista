@@ -1604,11 +1604,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/kristavaldez/Desktop/Final/LOkrista/KristaLO/KristaLO.csproj",
+      "projectUniqueName": "/Users/kristavaldez/Desktop/final/LastProject/KristaLO/KristaLO.csproj",
       "projectName": "KristaLO",
-      "projectPath": "/Users/kristavaldez/Desktop/Final/LOkrista/KristaLO/KristaLO.csproj",
+      "projectPath": "/Users/kristavaldez/Desktop/final/LastProject/KristaLO/KristaLO.csproj",
       "packagesPath": "/Users/kristavaldez/.nuget/packages/",
-      "outputPath": "/Users/kristavaldez/Desktop/Final/LOkrista/KristaLO/obj/",
+      "outputPath": "/Users/kristavaldez/Desktop/final/LastProject/KristaLO/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/kristavaldez/.config/NuGet/NuGet.Config"
@@ -1666,20 +1666,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.1.10, 3.1.10]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.osx-x64",
-            "version": "[3.1.22, 3.1.22]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[3.1.0, 3.1.0]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -1688,7 +1674,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.404/RuntimeIdentifierGraph.json"
       }
     }
   }
