@@ -7,7 +7,9 @@ namespace KristaLO.Controllers
 {
     public class MealsController : Controller
     {
-        public MealsController()
+        private ApplicationDbContext context;
+       
+        public MealsController(ApplicationDbse)
         {
         }
         //Get: /<controller>/
