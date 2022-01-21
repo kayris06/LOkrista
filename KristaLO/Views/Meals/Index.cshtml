@@ -4,7 +4,7 @@
 
 <p>show all Meals here</p>
 
-@if (Model.Count == 0)
+<!--if (Model.Count == 0)
 {
     <p>No Meals yet!</p>
 }
@@ -15,12 +15,12 @@ else
             <th>Position Name</th>
             <th>Employer</th>
         </tr>
-        @foreach (var meal in Model)
+        foreach (var meal in Model)
         {
             <tr>
-                <td><a asp-controller="Home" asp-action="Detail" asp-route-id="@job.Id">@job.Name</a></td>
-                <td>@job.Employer.Name</td>
+                <td><a asp-controller="Home" asp-action="Detail" asp-route-id="job.Id">job.Name</a></td>
+                <td>job.Employer.Name</td>
             </tr>
         }
     </table>
-}
+}-->

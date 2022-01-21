@@ -1,5 +1,6 @@
 ﻿using System;
 using FinalLiftOff.Models;
+using KristaLO.Data;
 using KristaLO.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,10 +8,11 @@ namespace KristaLO.Controllers
 {
     public class MealsController : Controller
     {
-        private ApplicationDbContext context;
+        private NourishDbContext context;
        
-        public MealsController(ApplicationDbse)
+        public MealsController(NourishDbContext dbContext)
         {
+            context = dbContext;
         }
         //Get: /<controller>/
         public IActionResult Index()
@@ -42,7 +44,7 @@ namespace KristaLO.Controllers
             }
             return View(addMealViewModel);
         }
-
+       
         public IActionResult Info()
         {
             return View();

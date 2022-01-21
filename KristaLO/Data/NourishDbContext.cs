@@ -4,11 +4,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace KristaLO.Data
 {
-    public class NourishDbContext
+    public class NourishDbContext : DbContext
     {
         public DbSet<Meals> Meals { get; set; }
 
-        public NourishDbContext()
+        public NourishDbContext(DbContextOptions<NourishDbContext> options)
+            :base(options)
         {
         }
     }

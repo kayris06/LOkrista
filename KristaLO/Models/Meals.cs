@@ -6,8 +6,8 @@ namespace FinalLiftOff.Models
 {
     public class Meals
     {
-        public int Id { get; }
-        static private int nextId = 1;
+        public int Id { get; set; }
+        
 
         public int MealID { get; set; }
 
@@ -19,7 +19,10 @@ namespace FinalLiftOff.Models
 
         //public string Restrictions { get; set; }
 
-        
+        public Meals()
+        {
+         
+        }
 
         public Meals(int price, string name, string description)
         {
@@ -27,12 +30,8 @@ namespace FinalLiftOff.Models
             Name = name;
             Description = description;
 
-            Id = nextId;
-            nextId++;
         }
 
-        public Meals()
-        {
-        }
+        
     }
 }
