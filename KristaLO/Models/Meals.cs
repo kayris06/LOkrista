@@ -7,10 +7,7 @@ namespace FinalLiftOff.Models
     public class Meals
     {
         public int Id { get; set; }
-        
-
-        public int MealID { get; set; }
-
+     
         public int Price { get; set; }
 
         public string Name { get; set; }

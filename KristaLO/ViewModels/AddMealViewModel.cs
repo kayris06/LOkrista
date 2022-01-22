@@ -9,8 +9,6 @@ namespace KristaLO.ViewModels
     {
         public int Id { get; set; }
 
-        public int MealID { get; set; }
-
         [Required(ErrorMessage = "Price is required")]
         public int Price { get; set; }
 

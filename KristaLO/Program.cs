@@ -22,5 +22,6 @@ namespace KristaLO
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
     }
 }

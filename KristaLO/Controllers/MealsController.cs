@@ -26,6 +26,7 @@ namespace KristaLO.Controllers
             AddMealViewModel addMealViewModel = new AddMealViewModel();
             return View(addMealViewModel);
         }
+
         [HttpPost]
         public IActionResult Add(AddMealViewModel addMealViewModel)
         {
@@ -40,9 +41,12 @@ namespace KristaLO.Controllers
            
                 };
 
-                return Redirect("/Meals");
+                context.Meal.Add(newMeal);
+                context.SaveChanges();
+
+                return Redirect("Meals/info");
             }
-            return View(addMealViewModel);
+            return View("Add", addMealViewModel);
         }
        
         public IActionResult Info()

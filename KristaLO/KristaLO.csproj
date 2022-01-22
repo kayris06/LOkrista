@@ -16,6 +16,8 @@
     <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
     <None Remove="Microsoft.AspNetCore.Identity" />
     <None Remove="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
+    <None Remove="Microsoft.NETCore.App" />
+    <None Remove="Areas\Identity\Data\" />
   </ItemGroup>
   <ItemGroup>
     <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
@@ -38,5 +40,6 @@
     <Folder Include="ViewModels\" />
     <Folder Include="Views\Meals\" />
     <Folder Include="Data\" />
+    <Folder Include="Areas\Identity\Data\" />
   </ItemGroup>
 </Project>
