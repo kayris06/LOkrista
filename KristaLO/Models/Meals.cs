@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace FinalLiftOff.Models
+namespace KristaLO.Models
 {
     public class Meals
     {
@@ -16,18 +16,19 @@ namespace FinalLiftOff.Models
 
         //public string Restrictions { get; set; }
 
-        public Meals()
-        {
-         
-        }
-
-        public Meals(int price, string name, string description) : this()
+        public Meals(int price, string name, string description)
         {
             Price = price;
             Name = name;
             Description = description;
 
         }
+        public Meals()
+        {
+         
+        }
+
+        
 
         public override string ToString()
         {

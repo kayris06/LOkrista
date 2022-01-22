@@ -1,14 +1,13 @@
 ﻿<Properties StartupConfiguration="{24C7D16C-5F98-47F3-A630-B2A840598282}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="KristaLO/Controllers/HomeController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="KristaLO/Views/Meals/Info.cshtml">
     <Files>
-      <File FileName="KristaLO/Views/Meals/Info.cshtml" Line="39" Column="2" />
-      <File FileName="KristaLO/Models/Meals.cs" Line="30" Column="10" />
-      <File FileName="KristaLO/Views/Home/Index.cshtml" Line="12" Column="1" />
-      <File FileName="KristaLO/Views/Meals/Index.cshtml" Line="5" Column="1" />
-      <File FileName="KristaLO/ViewModels/MealInfoViewModel.cs" Line="27" Column="2" />
-      <File FileName="KristaLO/Controllers/MealsController.cs" Line="63" Column="6" />
-      <File FileName="KristaLO/Data/NourishDbContext.cs" Line="18" Column="10" />
-      <File FileName="KristaLO/Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="KristaLO/Controllers/MealsController.cs" Line="21" Column="30" />
+      <File FileName="KristaLO/ViewModels/AddMealViewModel.cs" Line="31" Column="1" />
+      <File FileName="KristaLO/Views/Meals/Info.cshtml" Line="18" Column="10" />
+      <File FileName="KristaLO/Views/Meals/Add.cshtml" Line="4" Column="18" />
+      <File FileName="KristaLO/Views/Meals/Dashboard.cshtml" Line="19" Column="14" />
+      <File FileName="KristaLO/Models/Meals.cs" Line="50" Column="2" />
+      <File FileName="KristaLO/Views/Meals/Index.cshtml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,16 +15,15 @@
           <Node name="LastProject" expanded="True">
             <Node name="KristaLO" expanded="True">
               <Node name="Dependencies" expanded="True" />
-              <Node name="Controllers" expanded="True">
-                <Node name="HomeController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
-              <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Home" expanded="True" />
-                <Node name="Meals" expanded="True" />
+                <Node name="Meals" expanded="True">
+                  <Node name="Info.cshtml" selected="True" />
+                </Node>
               </Node>
               <Node name="wwwroot" expanded="True">
                 <Node name="css" expanded="True" />

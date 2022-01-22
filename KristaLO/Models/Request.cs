@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using FinalLiftOff.Models;
+
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace KristaLO.Models

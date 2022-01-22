@@ -1,5 +1,5 @@
 ﻿using System;
-using FinalLiftOff.Models;
+using KristaLO.Models;
 
 namespace KristaLO.ViewModels
 {

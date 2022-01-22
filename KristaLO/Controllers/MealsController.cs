@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using FinalLiftOff.Models;
+
 using KristaLO.Data;
+using KristaLO.Models;
 using KristaLO.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,6 +17,7 @@ namespace KristaLO.Controllers
         {
             context = dbContext;
         }
+
         //Get: /<controller>/
         public IActionResult Index()
         {
@@ -23,9 +25,11 @@ namespace KristaLO.Controllers
             return View(theMeal);
         }
 
-        
+       
         public IActionResult Add()
         {
+           
+
             AddMealViewModel addMealViewModel = new AddMealViewModel();
             return View(addMealViewModel);
         }
@@ -33,25 +37,33 @@ namespace KristaLO.Controllers
         [HttpPost]
         public IActionResult Add(AddMealViewModel addMealViewModel)
         {
-            if (ModelState.IsValid)
-            {
-             
-                Meals newMeal = new Meals
+                if (ModelState.IsValid)
                 {
-                    Price = addMealViewModel.Price,
-                    Name = addMealViewModel.Name,
-                    Description = addMealViewModel.Description
-           
-                };
 
-                context.Meal.Add(newMeal);
-                context.SaveChanges();
+                    Meals newMeal = new Meals
+                    {
+                        Price = addMealViewModel.Price,
+                        Name = addMealViewModel.Name,
+                        Description = addMealViewModel.Description
 
-                return Redirect("/Meals/info");
+                    };
+
+                    context.Meal.Add(newMeal);
+                    context.SaveChanges();
+
+                    return Redirect("/Meals/dashboard");
+                }
+                return View("Add" ,addMealViewModel);
             }
-            return View("Add", addMealViewModel);
+        
+        public IActionResult Dashboard()
+        {
+            List<Meals> meals = context.Meal.ToList();
+
+            return View(meals);
         }
-       
+
+
         public IActionResult Info(int id)
         {
             {

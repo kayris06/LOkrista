@@ -1,5 +1,5 @@
 ﻿using System;
-namespace FinalLiftOff.Models
+namespace KristaLO.Models
 {
     public class Registered
     {

@@ -268,3 +268,4 @@
 /Users/kristavaldez/Desktop/final/LastProject/KristaLO/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/_ViewImports.cshtml.g.cs
 /Users/kristavaldez/Desktop/final/LastProject/KristaLO/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml.g.cs
 /Users/kristavaldez/Desktop/final/LastProject/KristaLO/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ViewImports.cshtml.g.cs
+/Users/kristavaldez/Desktop/final/LastProject/KristaLO/obj/Debug/netcoreapp3.1/Razor/Views/Meals/Dashboard.cshtml.g.cs
