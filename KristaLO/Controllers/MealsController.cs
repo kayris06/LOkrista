@@ -17,6 +17,7 @@ namespace KristaLO.Controllers
         //Get: /<controller>/
         public IActionResult Index()
         {
+            
             return View();
         }
 
@@ -44,14 +45,19 @@ namespace KristaLO.Controllers
                 context.Meal.Add(newMeal);
                 context.SaveChanges();
 
-                return Redirect("Meals/info");
+                return Redirect("/Meals/info");
             }
             return View("Add", addMealViewModel);
         }
        
-        public IActionResult Info()
+        public IActionResult Info(int id)
         {
-            return View();
+            {
+                Meals theMeal = context.Meal.Find(id);
+
+                return View(theMeal);
+            }
+            
         }
         
     }

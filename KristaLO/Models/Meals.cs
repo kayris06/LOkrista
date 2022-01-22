@@ -21,7 +21,7 @@ namespace FinalLiftOff.Models
          
         }
 
-        public Meals(int price, string name, string description)
+        public Meals(int price, string name, string description) : this()
         {
             Price = price;
             Name = name;
