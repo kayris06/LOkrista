@@ -1,4 +1,6 @@
 ﻿
+@model List<FinalLiftOff.Models.Meals>
+
 <h1>This will display only one meal, also will only show the one meal that you add</h1>
 
 <br />
@@ -10,21 +12,18 @@
 
 <h1>What are you cooking!</h1>
 
-
-@foreach (var meal in Model)
-{
     <table class="table">
         <tr>
             <th>Price</th>
-            <td>meal.Price</td>
+            <td>@Model.Price</td>
         </tr>
         <tr>
             <th>Meal</th>
-            <td>meal.Name</td>
+            <td>@Model.Name</td>
         </tr>
         <tr>
             <th>Description</th>
-            <td>meal.Description</td>
+            <td>@Model.Description</td>
 
         </tr>
         <tr>
@@ -34,6 +33,6 @@
 
 
     </table>
-}
+
 
 <a asp-controller="Meals" asp-action="Order" asp-route-id="Order">Order Now</a>

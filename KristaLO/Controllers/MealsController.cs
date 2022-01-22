@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using FinalLiftOff.Models;
 using KristaLO.Data;
 using KristaLO.ViewModels;
@@ -17,8 +19,8 @@ namespace KristaLO.Controllers
         //Get: /<controller>/
         public IActionResult Index()
         {
-            
-            return View();
+            List<Meals> theMeal = context.Meal.ToList();
+            return View(theMeal);
         }
 
         
