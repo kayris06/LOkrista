@@ -45,7 +45,29 @@ namespace KristaLO.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-            [Required]
+            [Required(ErrorMessage = "Name is required")]
+            public string Name { get; set; }
+
+
+            [Required(ErrorMessage = "Address is required")]
+            public List<Address> { get; set; }
+
+            [Required(ErrorMessage = "Payment type Required")]
+            public List<PaymentType> {get; set;}
+
+
+    [Required]
+    [DisplayName("")]
+    public IEnumerable<string> Address { get; set; }
+    public SelectList Lista = new SelectList(new[]
+    {
+        new SelectListItem { Text = "North"},
+        new SelectListItem  {Text = "South"},
+        new SelectListItem { Text = "East"},
+        new SelectListItem { Text = "West"},
+    }, "Text");
+
+    [Required]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }

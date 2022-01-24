@@ -13,6 +13,30 @@
             <hr />
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
+                <label asp-for="Input.Name"></label>
+                <input asp-for="Input.Name" class="form-control" />
+                <span asp-validation-for="Input.Name" class="text-danger"></span>
+            </div>
+
+            @*this will be a check box of North, South, East, *@
+            <div class="form-group">
+                <label asp-for="Input.Address">What area do you live in</label>
+                <input asp-for="Input.Address" class="form-control" />
+                <span asp-validation-for="Input.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.Payment">Payment</label>
+                <input asp-for="Input.Payment" class="form-control" />
+                <span asp-validation-for="Input.Payment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.DietaryR">Your dietary restrictions</label>
+                <input asp-for="Input.DietaryR" class="form-control" />
+                <span asp-validation-for="Input.DietaryR" class="text-danger"></span>
+            </div>
+
+            @*<div asp-validation-summary="All" class="text-danger"></div>*@
+            <div class="form-group">
                 <label asp-for="Input.Email"></label>
                 <input asp-for="Input.Email" class="form-control" />
                 <span asp-validation-for="Input.Email" class="text-danger"></span>

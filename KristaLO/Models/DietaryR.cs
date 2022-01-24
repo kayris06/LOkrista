@@ -1,10 +1,9 @@
 ﻿using System;
 namespace KristaLO.Models
 {
-    public class Payment
+    public class DietaryR
     {
-
-        public Payment()
+        public DietaryR()
         {
         }
     }
