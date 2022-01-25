@@ -1,6 +1,12 @@
-﻿namespace KristaLO.Areas.Identity.Pages.Account
+﻿using System;
+namespace KristaLO.Models
 {
-    public class PaymentType
+    public enum PaymentType
     {
+        Paypal,
+        CashApp,
+        Venmo,
+        Credit
+
     }
 }

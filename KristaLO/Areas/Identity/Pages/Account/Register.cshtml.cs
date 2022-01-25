@@ -1,18 +1,22 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
+using KristaLO.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+
 
 namespace KristaLO.Areas.Identity.Pages.Account
 {
@@ -43,94 +47,117 @@ namespace KristaLO.Areas.Identity.Pages.Account
 
         public IList<AuthenticationScheme> ExternalLogins { get; set; }
 
+        public string Name { get; set; }
+
+        public List<Address> AddressLocation { get; set; }
+
+
+        public List<DietaryR> DietaryRs { get; set; }
+
+        public List<PaymentType> PaymentTypes { get; set; }
+
+
         public class InputModel
         {
             [Required(ErrorMessage = "Name is required")]
+            [Display(Name = "Name")]
             public string Name { get; set; }
 
-
             [Required(ErrorMessage = "Address is required")]
-            public List<Address> { get; set; }
-
-            [Required(ErrorMessage = "Payment type Required")]
-            public List<PaymentType> {get; set;}
-
-
-    [Required]
-    [DisplayName("")]
-    public IEnumerable<string> Address { get; set; }
-    public SelectList Lista = new SelectList(new[]
-    {
-        new SelectListItem { Text = "North"},
-        new SelectListItem  {Text = "South"},
-        new SelectListItem { Text = "East"},
-        new SelectListItem { Text = "West"},
-    }, "Text");
-
-    [Required]
-            [EmailAddress]
-            [Display(Name = "Email")]
-            public string Email { get; set; }
-
-            [Required]
-            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
-            [DataType(DataType.Password)]
-            [Display(Name = "Password")]
-            public string Password { get; set; }
-
-            [DataType(DataType.Password)]
-            [Display(Name = "Confirm password")]
-            [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
-            public string ConfirmPassword { get; set; }
-        }
-
-        public async Task OnGetAsync(string returnUrl = null)
-        {
-            ReturnUrl = returnUrl;
-            ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
-        }
-
-        public async Task<IActionResult> OnPostAsync(string returnUrl = null)
-        {
-            returnUrl = returnUrl ?? Url.Content("~/");
-            ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
-            if (ModelState.IsValid)
+            [Display(Name = "Address")]
+            public List<SelectListItem> AddressLocation { get; set; } = new List<SelectListItem>
             {
-                var user = new IdentityUser { UserName = Input.Email, Email = Input.Email };
-                var result = await _userManager.CreateAsync(user, Input.Password);
-                if (result.Succeeded)
+                new SelectListItem(Address.North.ToString(), ((int)Address.North).ToString()),
+                new SelectListItem(Address.South.ToString(), ((int)Address.South).ToString()),
+                new SelectListItem(Address.East.ToString(), ((int)Address.East).ToString()),
+                new SelectListItem(Address.West.ToString(), ((int)Address.West).ToString()),
+            };
+
+            [Display(Name = "Dietary Restrictions")]
+            public List<SelectListItem> DietaryRs { get; set; } = new List<SelectListItem>
+            {
+                new SelectListItem(DietaryR.GlutenFree.ToString(), ((int)DietaryR.GlutenFree).ToString()),
+                new SelectListItem(DietaryR.DairyFree.ToString(), ((int)DietaryR.DairyFree).ToString()),
+                new SelectListItem(DietaryR.Vegetarian.ToString(), ((int)DietaryR.Vegetarian).ToString()),
+                new SelectListItem(DietaryR.Vegan.ToString(), ((int)DietaryR.Vegan).ToString()),
+            };
+
+            [Required(ErrorMessage = "Must select one")]
+            [Display(Name = "Payment Type")]
+            public List<SelectListItem> PaymentTypes { get; set; } = new List<SelectListItem>
+            {
+                new SelectListItem(PaymentType.Paypal.ToString(), ((int)PaymentType.Paypal).ToString()),
+                new SelectListItem(PaymentType.CashApp.ToString(), ((int)PaymentType.CashApp).ToString()),
+                new SelectListItem(PaymentType.Venmo.ToString(), ((int)PaymentType.Venmo).ToString()),
+                new SelectListItem(PaymentType.Credit.ToString(), ((int)PaymentType.Credit).ToString())
+            };
+
+
+
+        [Required]
+        [EmailAddress]
+        [Display(Name = "Email")]
+        public string Email { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+        [DataType(DataType.Password)]
+        [Display(Name = "Password")]
+        public string Password { get; set; }
+
+        [DataType(DataType.Password)]
+        [Display(Name = "Confirm password")]
+        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        public string ConfirmPassword { get; set; }
+    }
+
+    public async Task OnGetAsync(string returnUrl = null)
+    {
+        ReturnUrl = returnUrl;
+        ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+    }
+
+    public async Task<IActionResult> OnPostAsync(string returnUrl = null)
+    {
+        returnUrl = returnUrl ?? Url.Content("~/meals/dashboard");
+        ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+        if (ModelState.IsValid)
+        {
+            var user = new IdentityUser { UserName = Input.Email, Email = Input.Email };
+            var result = await _userManager.CreateAsync(user, Input.Password);
+            if (result.Succeeded)
+            {
+                _logger.LogInformation("User created a new account with password.");
+
+                var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+                var callbackUrl = Url.Page(
+                    "/Account/ConfirmEmail",
+                    pageHandler: null,
+                    values: new { area = "Identity", userId = user.Id, code = code, returnUrl = returnUrl },
+                    protocol: Request.Scheme);
+
+                await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
+                    $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+
+                if (_userManager.Options.SignIn.RequireConfirmedAccount)
                 {
-                    _logger.LogInformation("User created a new account with password.");
-
-                    var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                    code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-                    var callbackUrl = Url.Page(
-                        "/Account/ConfirmEmail",
-                        pageHandler: null,
-                        values: new { area = "Identity", userId = user.Id, code = code, returnUrl = returnUrl },
-                        protocol: Request.Scheme);
-
-                    await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                        $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
-
-                    if (_userManager.Options.SignIn.RequireConfirmedAccount)
-                    {
-                        return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });
-                    }
-                    else
-                    {
-                        await _signInManager.SignInAsync(user, isPersistent: false);
-                        return LocalRedirect(returnUrl);
-                    }
+                    return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });
                 }
-                foreach (var error in result.Errors)
+                else
                 {
-                    ModelState.AddModelError(string.Empty, error.Description);
+                    await _signInManager.SignInAsync(user, isPersistent: false);
+                    return LocalRedirect(returnUrl);
                 }
             }
-
-            // If we got this far, something failed, redisplay form
-            return Page();
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError(string.Empty, error.Description);
+            }
         }
+
+        // If we got this far, something failed, redisplay form
+        return Page();
     }
+}
 }

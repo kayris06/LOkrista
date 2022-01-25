@@ -14,13 +14,16 @@ namespace KristaLO.Models
 
         public string Description { get; set; }
 
+        public string DietaryRestrictions { get; set; }
+
         //public string Restrictions { get; set; }
 
-        public Meals(int price, string name, string description)
+        public Meals(int price, string name, string description, string dietaryRestrictions)
         {
             Price = price;
             Name = name;
             Description = description;
+            DietaryRestrictions = dietaryRestrictions;
 
         }
         public Meals()

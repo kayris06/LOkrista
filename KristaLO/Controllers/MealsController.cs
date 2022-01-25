@@ -5,6 +5,7 @@ using System.Linq;
 using KristaLO.Data;
 using KristaLO.Models;
 using KristaLO.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KristaLO.Controllers
@@ -25,7 +26,7 @@ namespace KristaLO.Controllers
             return View(theMeal);
         }
 
-       
+        [Authorize]
         public IActionResult Add()
         {
            
@@ -34,6 +35,7 @@ namespace KristaLO.Controllers
             return View(addMealViewModel);
         }
 
+        
         [HttpPost]
         public IActionResult Add(AddMealViewModel addMealViewModel)
         {
@@ -51,7 +53,7 @@ namespace KristaLO.Controllers
                     context.Meal.Add(newMeal);
                     context.SaveChanges();
 
-                    return Redirect("/Meals/dashboard");
+                    return Redirect("/Meals");
                 }
                 return View("Add" ,addMealViewModel);
             }

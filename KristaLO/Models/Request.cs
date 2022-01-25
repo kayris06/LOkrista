@@ -15,13 +15,13 @@ namespace KristaLO.Models
 
         public string Meal { get; set; }
 
-        public List<SelectListItem> DietaryR { get; set; }
+       
 
         public string NameCustomer { get; set; }
 
         public string NameCook { get; set; }
 
-        public List<Payment> Paymenttype { get; set; }
+       
 
         public bool AvailableNow { get; set; }
 

@@ -1,10 +1,12 @@
 ﻿using System;
 namespace KristaLO.Models
 {
-    public class DietaryR
+    public enum DietaryR
     {
-        public DietaryR()
-        {
-        }
+        GlutenFree,
+        DairyFree,
+        Vegetarian,
+        Vegan
+
     }
 }
