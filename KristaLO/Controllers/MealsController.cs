@@ -46,8 +46,8 @@ namespace KristaLO.Controllers
                     {
                         Price = addMealViewModel.Price,
                         Name = addMealViewModel.Name,
-                        Description = addMealViewModel.Description
-
+                        Description = addMealViewModel.Description,
+                        DietaryRestrictions = addMealViewModel.DietaryRestrictions
                     };
 
                     context.Meal.Add(newMeal);
