@@ -57,13 +57,14 @@ namespace KristaLO.Controllers
                 }
                 return View("Add" ,addMealViewModel);
             }
-        
-        public IActionResult Dashboard()
-        {
-            List<Meals> meals = context.Meal.ToList();
 
-            return View(meals);
-        }
+        // This method will be used to create the entire dashboard 
+        //public IActionResult Dashboard()
+        //{
+        //    List<Meals> meals = context.Meal.ToList();
+
+        //    return View(meals);
+        //}
 
 
         public IActionResult Info(int id)

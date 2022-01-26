@@ -1,25 +1,15 @@
 ﻿<Properties StartupConfiguration="{24C7D16C-5F98-47F3-A630-B2A840598282}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="KristaLO/wwwroot/js/site.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="KristaLO/Data/NourishDbContext.cs">
     <Files>
-      <File FileName="KristaLO/Areas/Identity/Pages/Account/Login.cshtml" Line="1" Column="1" />
-      <File FileName="KristaLO/Areas/Identity/Pages/Account/Login.cshtml.cs" Line="76" Column="58" />
-      <File FileName="KristaLO/Areas/Identity/Pages/Account/Register.cshtml.cs" Line="96" Column="1" />
-      <File FileName="KristaLO/wwwroot/js/site.js" Line="5" Column="1" />
+      <File FileName="KristaLO/Controllers/MealsController.cs" Line="60" Column="1" />
+      <File FileName="KristaLO/Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="KristaLO/Data/NourishDbContext.cs" Line="26" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="LastProject" expanded="True">
-            <Node name="KristaLO" expanded="True">
-              <Node name="Dependencies" expanded="True" />
-              <Node name="Views" expanded="True" />
-              <Node name="wwwroot" expanded="True">
-                <Node name="css" expanded="True" />
-                <Node name="js" expanded="True">
-                  <Node name="site.js" selected="True" />
-                </Node>
-              </Node>
-            </Node>
+            <Node name="KristaLO" expanded="True" />
           </Node>
         </State>
       </Pad>
