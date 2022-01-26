@@ -1,4 +1,30 @@
-﻿@page
-@{
-}
+﻿<KristaLO.Models.Meals>
+
+    <h3>What's Cooking</h3>
+
+    @if (Model.Count == 0)
+    {
+        <p>No meals</p>
+    }
+    else
+    {
+        <div>
+            <ul>
+                @foreach (Meals meal in Model)
+                {
+                    <li>
+                        <a asp-controller="Meals" asp-action="Info" asp-route-id="@meal.Id">@meal.Name</a>
+                    </li>
+                }
+            </ul>
+        </div>
+
+    }
+
+
+
+    <a asp-controller="Meals" asp-action="Add">Add A Meal</a>
+
+   
+
 

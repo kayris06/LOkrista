@@ -1,31 +1,35 @@
 ﻿@model KristaLO.ViewModels.AddMealViewModel;
 
 
-
-
-
 <h1>Add Meal</h1>
 
-
-
 <form asp-controller="Meals" asp-action="Add" method="post">
-        <div class="form-group">
-            <label asp-for="Price"></label>
-            <input asp-for="Price" />
-            <span asp-validation-for="Price"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="Name"></label>
-            <input asp-for="Name" />
-            <span asp-validation-for="Name"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="Description"></label>
-            <input asp-for="Description" />
-        </div>
-        <div class="form-group">
-            <label>Dietary Restrictions</label>
-            @*<select asp-for="CategoryId" asp-items="Model.Categories"></select>*@
-        </div>
-        <input type="submit" value="Add Meal" />
-    </form>
+    <div class="form-group">
+        <label asp-for="Price"></label>
+        <br />
+        <input asp-for="Price" />
+        <span asp-validation-for="Price"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <br />
+        <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <br />
+        <textarea asp-for="Description" cols="25" rows="3"></textarea>
+        <span asp-validation-for="Description"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="DietaryRestrictions">Dietary Restrictions</label>
+        <br />
+        <input asp-for="DietaryRestrictions" />
+        <span asp-validation-for="DietaryRestrictions"></span>
+    </div>
+
+    <input type="submit" value="Add Meal" />
+</form>
+
+
