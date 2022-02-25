@@ -1,1 +1,38 @@
-﻿@*This page will be a form for used to order a meal*@
+﻿@using KristaLO.Models
+@model Meals
+
+<h1>@Model.Name</h1>
+
+<table class="table">
+    <tr>
+        <th>Price</th>
+        <td>@Model.Price</td>
+    </tr>
+    <tr>
+        <th>Meal</th>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <th>Description</th>
+        <td>@Model.Description</td>
+    </tr>
+    <tr>
+        <th>Dietary Restrictions</th>
+        <td>@Model.DietaryRestrictions</td>
+    </tr>
+
+</table>
+
+@*<div class="form-group">
+    <label asp-for="Description"></label>
+    <br />
+    <textarea asp-for="Description" cols="25" rows="3"></textarea>
+    <span asp-validation-for="Description"></span>
+</div>
+<div class="form-group">
+    <label asp-for="DietaryRestrictions">Dietary Restrictions</label>
+    <br />
+    <input asp-for="DietaryRestrictions" />
+    <span asp-validation-for="DietaryRestrictions"></span>
+</div>*@
+

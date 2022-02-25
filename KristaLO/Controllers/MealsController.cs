@@ -76,7 +76,16 @@ namespace KristaLO.Controllers
             }
             
         }
-        
+
+        public IActionResult Order(int id)
+        {
+            {
+                Meals theMeal = context.Meal.Find(id);
+
+                return View(theMeal);
+            }
+
+        }
     }
 }
 
